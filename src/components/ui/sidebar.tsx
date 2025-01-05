@@ -42,6 +42,10 @@ function useSidebar() {
     console.error("useSidebar must be used within a SidebarProvider.");
   }
 
+  if (!context) {
+    throw new Error("useSidebar must be used within a SidebarProvider.");
+  }
+
   return context;
 }
 
