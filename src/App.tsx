@@ -18,7 +18,7 @@ function App() {
         <h1 className="text-4xl font-bold">BPx Fleets</h1>
         <Button
           className="px-4 py-3 my-5"
-          onClick={() => connect({ connector: connectors[0] })}
+          onClick={() => connect({ connector: connectors[1] })}
           variant="default"
         >
           Connect wallet
