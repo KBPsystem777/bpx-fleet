@@ -14,22 +14,22 @@ import {
 // Menu items.
 const items = [
   {
-    title: "Home",
+    title: "Dashboard",
     url: "#",
     icon: Home,
   },
   {
-    title: "Inbox",
+    title: "Fleets",
     url: "#",
     icon: Inbox,
   },
   {
-    title: "Calendar",
+    title: "Drivers",
     url: "#",
     icon: Calendar,
   },
   {
-    title: "Search",
+    title: "Reports",
     url: "#",
     icon: Search,
   },

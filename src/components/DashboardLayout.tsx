@@ -12,6 +12,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <AppSidebar />
       <main>
         <SidebarTrigger />
+        web3Fleet
         {children}
       </main>
     </SidebarProvider>
