@@ -1,4 +1,4 @@
-import { useAccount, useConnect, useDisconnect } from "wagmi";
+import { useAccount, useConnect } from "wagmi";
 
 import { Button } from "./components/ui/button";
 import { DashboardLayout } from "./components/DashboardLayout";
@@ -10,7 +10,6 @@ import "./app.scss";
 function App() {
   const account = useAccount();
   const { connectors, connect } = useConnect();
-  const { disconnect } = useDisconnect();
 
   const LoginComponent = () => {
     return (
@@ -21,7 +20,7 @@ function App() {
           onClick={() => connect({ connector: connectors[1] })}
           variant="default"
         >
-          Connect wallet
+          Login via web3 account
         </Button>
       </div>
     );
@@ -30,14 +29,11 @@ function App() {
   return (
     <div className="font-mono">
       {account.status === "connected" ? (
-        <div>
+        <div className="flex">
           <DashboardLayout>
-            <div className="space-y-6  py-7 ml-7">
+            <div className="space-y-6  py-7 ml-7 mr-7">
               <VehicleManagement />
               <DriverRenterProfiles />
-              <Button variant="destructive" onClick={() => disconnect()}>
-                Disconnect
-              </Button>
             </div>
           </DashboardLayout>
         </div>
